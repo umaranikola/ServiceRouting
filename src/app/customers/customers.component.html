@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Customers</h2>
+  <div class="row">
+
+    <div class="col-sm-3">
+      <!-- <a (click)="loadCardView()">Crad-view</a> -->
+      <a routerLink='card'>Crad-view</a>
+    </div>
+    <div class="col-sm-3">
+        <a routerLink='grid'>Grid-view</a>
+      <!-- <a (click)="loadListView()">List-view</a> -->
+    </div>
+    <div class="col-sm-3">
+      <a (click)="loadMapView()">Map-view</a>
+    </div>
+    <div class="col-sm-3">
+      <a (click)="loadNewCustomer()">New Customer</a>
+    </div>
+  </div>
+
+  <div *ngIf="loadCardViewStatus">
+    <card-view [customersData] = "customers"></card-view>
+  </div>
+  <div *ngIf="loadListViewStatus">
+    <!-- <card-view></card-view> -->
+  </div>
+  <div *ngIf="loadMapViewStatus">
+    <card-view></card-view>
+  </div>
+  <div *ngIf="loadNewCustomerStatus">
+    <card-view></card-view>
+  </div>
+</div>
